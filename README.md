@@ -1,48 +1,77 @@
-# TaskFlow · Proyecto base de la Semana 14
+﻿# TaskFlow — Parcial 2
 
-Punto de partida para la actividad de la **Semana 14: Programación asíncrona y consumo de APIs REST**.
-Contiene TaskFlow tal como queda al cerrar la Semana 13. La actividad de esta semana **no está resuelta**: los archivos marcados con `TODO` indican dónde trabajar, siguiendo los pasos de la página de Canvas.
+Aplicación desarrollada con Flutter y Dart para la asignatura Desarrollo de Aplicaciones Móviles.
 
-## Cómo ejecutarlo
+## Funcionalidades
 
-```bash
-flutter create . --project-name taskflow   # genera android/, ios/, web/... (no toca lib/ ni test/)
-flutter pub get
-flutter run
-flutter test
+- Inicio de sesión con validación de correo y contraseña.
+- Registro con nombre, correo, contraseña, confirmación y aceptación de términos.
+- Navegación entre Login, Registro y Listado.
+- Consulta de publicaciones desde una API REST pública.
+- Paginación automática al desplazarse por la lista.
+- Estados de carga, error, reintento y lista vacía.
+- Actualización manual de publicaciones.
+- Cierre de sesión.
+
+## Tecnologías utilizadas
+
+- Flutter y Dart.
+- Riverpod para el manejo del estado.
+- HTTP para las solicitudes a la API.
+- JSONPlaceholder como API pública de publicaciones.
+- Material Design.
+
+## Estructura principal
+
+```text
+lib/
+├── datos/
+│   └── publicaciones_api.dart
+├── estado/
+│   └── publicaciones_provider.dart
+├── modelos/
+│   └── publicacion.dart
+├── pantallas/
+│   ├── login_screen.dart
+│   ├── registro_screen.dart
+│   └── listado_screen.dart
+└── widgets/
+    └── campo_formulario.dart
 ```
 
-Requiere **Flutter 3.35 o superior**. Si tienes una versión anterior, cambia `initialValue:` por `value:` en `lib/pantallas/nueva_tarea_screen.dart`.
+## Cómo ejecutar el proyecto
 
-## Lo que ya funciona (Semanas 3 a 13)
+Se necesita Flutter instalado y conexión a Internet para consultar las publicaciones.
 
-- Modelo `Tarea` con encapsulamiento de la prioridad.
-- Estado local con Riverpod (`taskProvider`): agregar, completar y eliminar tareas.
-- Pantalla **Nueva tarea** con formulario validado que devuelve la tarea con `Navigator.pop`.
-- Validadores puros (`ValidadoresTarea`) y sus pruebas en `test/`.
+Desde PowerShell, dentro de la carpeta del proyecto:
 
-## Lo que harás esta semana
+```powershell
+flutter pub get
+flutter run
+```
 
-### Sesión 1 — Asincronía en Dart
+Para analizar el código:
 
-| Sección | Archivo | Qué hacer |
-|---|---|---|
-| 1.3 | `practica_sesion1/1_3_orden_ejecucion.dart` | Predecir el orden y luego ejecutar con `dart run`. |
-| 1.6 | `practica_sesion1/1_6_await_olvidado.dart` | Encontrar y corregir el error; activar `unawaited_futures`. |
-| 1.7 | `practica_sesion1/1_7_futures_independientes.dart` | Medir los tiempos y responder la pregunta sobre `.wait`. |
-| 1.8 | `lib/practica/experimento_isolate_screen.dart` | Implementar `sinIsolate()` y `conIsolate()`. Se abre con el ícono 🧪 del listado. |
+```powershell
+flutter analyze
+```
 
-### Sesión 2 — TaskFlow se conecta a una API REST
+## Capturas de pantalla
 
-| Paso | Archivo | Qué hacer |
-|---|---|---|
-| 3 | `pubspec.yaml`, `AndroidManifest.xml`, `lib/modelos/tarea.dart` | Agregar `http`, el permiso de internet, el campo `id`, `fromJson` y `toJson`. |
-| 4–5 | `lib/datos/tareas_api.dart` | Crear `ApiException` y `TareasApi` (GET y POST con manejo de errores). |
-| 6 | `lib/estado/tareas_remotas_provider.dart` | Crear los providers y `TareasRemotasNotifier`. |
-| 7 | `lib/pantallas/tareas_remotas_screen.dart` y `listado_tareas_screen.dart` | Crear la pantalla «Tareas en la nube» y el botón ☁ que la abre. |
-| 9 | — | Probar los cuatro escenarios de fallo y documentarlos. |
-| 10 | — | Validar `fromJson` con casos generados por IA y ejecutados por ti. |
+Pendiente de agregar las capturas reales de Login, Registro y Listado.
 
-**No modifiques** `nueva_tarea_screen.dart` ni `task_provider.dart`: la pantalla de la Semana 13 se reutiliza tal cual, y unir las tareas locales con las remotas es el tema de la Semana 15.
+## Diseños de Google Stitch
 
-Para ver todos los pendientes en VS Code, busca `TODO(` en el proyecto (Ctrl+Shift+F).
+- Enlace público del proyecto: pendiente.
+- Diseño de Login: pendiente.
+- Diseño de Registro: pendiente.
+- Diseño de Listado: pendiente.
+- Prompt utilizado: pendiente.
+
+## Uso de inteligencia artificial
+
+Se utilizó ChatGPT como apoyo durante el desarrollo y la documentación. La entrega debe especificar qué código se generó con ayuda de inteligencia artificial, qué partes se aceptaron o modificaron y qué sugerencias se descartaron, según el trabajo realizado.
+
+## Repositorio de GitHub
+
+https://github.com/Franklin23r/TaskFlow-Parcial2
