@@ -62,16 +62,28 @@ Pendiente de agregar las capturas reales de Login, Registro y Listado.
 
 ## Diseños de Google Stitch
 
-- Enlace público del proyecto: pendiente.
-- Diseño de Login: pendiente.
-- Diseño de Registro: pendiente.
-- Diseño de Listado: pendiente.
-- Prompt utilizado: pendiente.
+- **Enlace público:** [TaskFlow — Google Stitch](https://stitch.withgoogle.com/projects/10528244070720033011).
 
-## Uso de inteligencia artificial
+### Diseño de Login
 
-Se utilizó ChatGPT como apoyo durante el desarrollo y la documentación. La entrega debe especificar qué código se generó con ayuda de inteligencia artificial, qué partes se aceptaron o modificaron y qué sugerencias se descartaron, según el trabajo realizado.
+![Diseño de inicio de sesión](Evidencias_Parcial2/Stitch/stitch_login.png)
 
+### Diseño de Registro
+
+![Diseño de registro](Evidencias_Parcial2/Stitch/stitch_registro.png)
+
+### Diseño de Listado
+
+![Diseño del listado](Evidencias_Parcial2/Stitch/stitch_listado.png)
 ## Repositorio de GitHub
 
 https://github.com/Franklin23r/TaskFlow-Parcial2
+
+
+
+
+
+
+
+
+
