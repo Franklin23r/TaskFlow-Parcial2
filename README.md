@@ -58,8 +58,26 @@ flutter analyze
 
 ## Capturas de pantalla
 
-Pendiente de agregar las capturas reales de Login, Registro y Listado.
+A continuación se muestran las capturas de la aplicación desarrollada.
 
+### Inicio de sesión
+![Pantalla de inicio de sesión](Evidencias_Parcial2/login.png)
+
+### Registro
+![Pantalla de registro](Evidencias_Parcial2/registro.png)
+
+### Listado de publicaciones
+![Pantalla del listado](Evidencias_Parcial2/listado.png)
+
+## Evidencias de la Semana 14
+
+- Creación de tareas: `Evidencias_Semana14/03_Crear_Tarea.png.png`
+- Pruebas de API: `Evidencias_Semana14/04_Pruebas_API.png.png`
+- Pruebas generales: `Evidencias_Semana14/05_Pruebas_Generales.png.png`
+
+## Nota sobre autenticación
+
+El inicio de sesión y el registro utilizan validaciones en la aplicación y simulaciones de espera. No representan una autenticación conectada a un servidor ni un registro persistente de usuarios.
 ## Diseños de Google Stitch
 
 - **Enlace público:** [TaskFlow — Google Stitch](https://stitch.withgoogle.com/projects/10528244070720033011).
@@ -78,6 +96,7 @@ Pendiente de agregar las capturas reales de Login, Registro y Listado.
 ## Repositorio de GitHub
 
 https://github.com/Franklin23r/TaskFlow-Parcial2
+
 
 
 
