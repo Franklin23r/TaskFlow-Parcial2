@@ -1,4 +1,4 @@
-﻿# Bitácora de aprendizaje - Semana 14
+# Bitácora de aprendizaje - Semana 14
 **Estudiante:** Franklin Rivas
 
 ## Sesión 1: Programación asíncrona en Dart
@@ -135,3 +135,34 @@ El modelo comprueba que el título recibido sea una cadena no vacía. También c
 ### Conclusión de la sesión
 
 Aprendí a separar la comunicación HTTP de la interfaz, convertir respuestas JSON en objetos Dart, administrar estados asíncronos con Riverpod y controlar errores de red y de formato. Las pruebas automatizadas confirmaron el funcionamiento de los cuatro escenarios de error y las 19 pruebas generales del proyecto.
+
+## Revisión de la estructura actual de TaskFlow
+
+### Organización del código
+
+El proyecto separa las responsabilidades en carpetas para facilitar su mantenimiento:
+
+- `lib/datos/`: servicios que realizan solicitudes a APIs REST.
+- `lib/estado/`: proveedores de Riverpod para administrar el estado.
+- `lib/modelos/`: modelos de datos, como publicaciones y tareas.
+- `lib/pantallas/`: pantallas de inicio de sesión, registro, publicaciones, tareas locales y tareas remotas.
+- `lib/validacion/`: validaciones de los datos de las tareas.
+- `lib/widgets/`: componentes reutilizables de la interfaz.
+- `lib/practica/`: práctica relacionada con el experimento de isolates.
+- `lib/utils/`: funciones auxiliares.
+
+### Diferencia entre los datos de la aplicación
+
+La aplicación contiene funcionalidades distintas que deben identificarse correctamente:
+
+- **Publicaciones:** se consultan mediante `publicaciones_api.dart` y se administran con `publicaciones_provider.dart`.
+- **Tareas remotas:** se trabajan mediante `tareas_api.dart` y `tareas_remotas_provider.dart`. JSONPlaceholder simula la creación de datos y no garantiza almacenamiento permanente.
+- **Tareas locales:** se administran mediante `task_provider.dart` y las pantallas `listado_tareas_screen.dart` y `nueva_tarea_screen.dart`. El estado de estas tareas se conserva en memoria mientras la aplicación está ejecutándose, salvo que se implemente persistencia adicional.
+
+### Consideraciones sobre la navegación
+
+El punto de entrada está definido en `lib/main.dart` y muestra la pantalla de inicio de sesión. Según el flujo implementado, después del inicio de sesión se accede al listado de publicaciones. La pantalla de tareas locales es una funcionalidad independiente y no debe confundirse con el listado de publicaciones.
+
+### Estado de las pruebas
+
+En la revisión realizada se registraron 19 pruebas automatizadas aprobadas mediante `flutter test`. El análisis estático con `flutter analyze` reportó tres observaciones informativas sobre nombres de archivos de prácticas anteriores, sin errores reportados en esa ejecución.
